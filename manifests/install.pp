@@ -128,6 +128,8 @@ class grafana::install {
         require      => User['grafana']
       }
     }
+    'disabled': {
+    }
     default: {
       fail("Installation method ${::grafana::install_method} not supported")
     }

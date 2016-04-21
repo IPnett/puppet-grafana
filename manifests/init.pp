@@ -35,6 +35,7 @@
 # Set to 'docker' to install Grafana using the official Docker container.
 # Set to 'package' to install Grafana using .deb or .rpm packages.
 # Set to 'repo' to install Grafana using an apt or yum repository.
+# Set to 'disabled' to not manage installation of grafana.
 # Defaults to 'package'.
 #
 # [*manage_package_repo*]
