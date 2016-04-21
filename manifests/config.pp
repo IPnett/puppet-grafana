@@ -30,6 +30,14 @@ class grafana::config {
         content => template('grafana/config.ini.erb'),
       }
     }
+    'disabled': {
+      $cfg = $::grafana::cfg
+
+      file {  $::grafana::cfg_location:
+        ensure  => present,
+        content => template('grafana/config.ini.erb'),
+      }
+    }
     default: {
       fail("Installation method ${::grafana::install_method} not supported")
     }
