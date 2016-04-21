@@ -38,6 +38,12 @@ class grafana::service {
         }
       }
     }
+    'disabled': {
+      service { $::grafana::service_name:
+        ensure => running,
+        enable => true
+      }
+    }
     default: {
       fail("Installation method ${::grafana::install_method} not supported")
     }
